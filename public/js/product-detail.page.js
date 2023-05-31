@@ -4,13 +4,24 @@ import { productUrlEncode, priceToString } from "./utils.js";
 
 const INTERVAL_REFRESH_MS = 5000;
 
-const getSkuView = ({ name }) => `
-<div class="col-4">
-    <div class="border rounded-pill text-center">
-        <span class="skuPill">${name}</span>
-    </div>
-</div>
-`;
+const getSkuView = ({ name }) => {
+  const container = document.createElement("div");
+  const divColumn = document.createElement("div");
+  divColumn.classList.add("col-4");
+
+  const pill = document.createElement("div");
+  pill.classList.add("border", "rounded-pill", "text-center");
+
+  const nameSku = document.createElement("span");
+  nameSku.innerHTML = name;
+  nameSku.classList.add("skuPill");
+
+  pill.appendChild(nameSku);
+  divColumn.appendChild(pill);
+  container.appendChild(divColumn);
+
+  return container.innerHTML;
+};
 
 const updateView = (product, priceStock) => {
   console.log(document.getElementById("price"));
