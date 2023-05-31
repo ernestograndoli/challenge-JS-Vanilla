@@ -10,7 +10,10 @@ router.get("/", (req, res) => {
 });
 
 router.get("*", (req, res) => {
-  res.render("product-detail", { title: "Product Detail", styles: [] });
+  res.render("product-detail", {
+    title: "Product Detail",
+    styles: ["css/product-detail.css"],
+  });
 });
 
 module.exports = router;

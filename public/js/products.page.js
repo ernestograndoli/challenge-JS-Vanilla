@@ -7,26 +7,23 @@ const getHtmlProduct = (product) => `
 <div class="col-6 col-md-3">
     
         <div
-        class="card mb-3 bg-white border-0"
-        style="border-radius: 12px 12px 12px 12px"
+        class="card cardRadius mb-3 bg-white border-0"
         >
-            <div class="card-header fw-bold border-0 bg-white fs-6 pb-0"
-                style="border-radius: 12px 32px 12px 12px"
+            <div class="card-header cardRadius fw-bold border-0 bg-white fs-6 pb-0"
             >${product.brand}
             </div>
             <div class="card-body text-primary bg-white pt-0 pb-0">
             <a href="${productUrlEncode(
               product.id,
               product.brand
-            )}" style="text-decoration: none; color: inherit">
+            )}" class="links">
                 <img src="./img${product.image}" alt="${
   product.brand
 }" class="w-100" />
 </a>
             </div>            
             <div
-                class="card-footer bg-white border-0 p-0"
-                style="border-radius: 0px 0px 12px 12px"
+                class="card-footer cardFooterRadius bg-white border-0 p-0"
             >
                 <div class="row d-flex flex-row align-items-center w-100 m-0">
                     <div class="col-9 p-0">
@@ -34,8 +31,7 @@ const getHtmlProduct = (product) => `
                     </div>
                     <div class="col-3 p-0 d-flex flex-row justify-content-end">
                         <div
-                        style="background: #ff9f24;width: 40px;height: 40px;border-radius: 8px 0px;"
-                        class="d-flex flex-row justify-content-center align-items-center m-0">
+                        class="plusButton d-flex flex-row justify-content-center align-items-center m-0">
                         <span class="fs-1 text-white">+</span>
                         </div>
                     </div>

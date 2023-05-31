@@ -1,12 +1,32 @@
 .products-nav-header-icon {
-    width: 47px;
-    height: 47px;
-    background-image: url('../icons/user.jpg');
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
+  width: 47px;
+  height: 47px;
+  background-image: url("../icons/user.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
 }
 
 .products-footer-mobile {
-    height: 72px;
-    background: #ffffff
+  height: 72px;
+  background: #ffffff;
+}
+
+.cardRadius {
+  border-radius: 12px 12px 12px 12px;
+}
+
+.cardFooterRadius {
+  border-radius: 0px 0px 12px 12px;
+}
+
+.plusButton {
+  background: #ff9f24;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px 0px;
+}
+
+.links {
+  text-decoration: none;
+  color: inherit;
 }

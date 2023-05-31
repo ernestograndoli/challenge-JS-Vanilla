@@ -7,7 +7,7 @@ const INTERVAL_REFRESH_MS = 5000;
 const getSkuView = ({ name }) => `
 <div class="col-4">
     <div class="border rounded-pill text-center">
-        <span style="color: #969696; font-size: 14px">${name}</span>
+        <span class="skuPill">${name}</span>
     </div>
 </div>
 `;
